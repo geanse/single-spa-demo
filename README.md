@@ -1,3 +1,16 @@
+# Single SPA application Demo
+
+This is an example of a [Single SPA application](https://single-spa.js.org/docs/building-applications) that loads a Single SPA Parcel.
+
+Key files of interest:
+
+* `src/App.tsx` – This file demonstrates how the Bronte team can load our Vizualist Parcels.
+
+```
+$ yarn install
+$ yarn run dev
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
