@@ -5,6 +5,7 @@ This is an example of a [Single SPA root config](https://single-spa.js.org/docs/
 ```
 $ yarn install
 $ yarn run start
+# open http://localhost:9000
 ```
 
 > Created by https://single-spa.js.org/docs/create-single-spa/
