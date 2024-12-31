@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.toggle-parcel-btn {
+  z-index: 9999;
+  position: relative;
+}

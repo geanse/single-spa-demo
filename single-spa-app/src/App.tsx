@@ -6,14 +6,24 @@ import Parcel from 'single-spa-react/parcel'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isParcelVisible, setIsParcelVisible] = useState(true)
 
   return (
     <>
+      <button className="toggle-parcel-btn" type="button" onClick={() => setIsParcelVisible(!isParcelVisible)}>Toggle Parcel</button>
+
       {/* here we load the vizualist table parcel */}
-      <Parcel
-        config={() => window.System.import('http://localhost:5555/js/embed_table_3.92.1.js')}
-        wrapWith="div"
-      />
+      {
+        isParcelVisible && (
+          <Parcel
+            block
+            config={() => window.System.import('http://localhost:5555/js/embed_table_3.92.1.js')}
+            // config={() => window.System.import('https://res.cloudinary.com/wochap/raw/upload/v1735570922/tmp/spa-parcel-table-30-dec-2024-b.js')}
+            wrapWith="section"
+            wrapStyle={{ width: '90vw', height: 400 }}
+          />
+        )
+      }
 
       <div>
         <a href="https://vite.dev" target="_blank">
