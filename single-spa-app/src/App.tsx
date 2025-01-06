@@ -16,11 +16,12 @@ function App() {
       {
         isParcelVisible && (
           <Parcel
-            block
             config={() => window.System.import('http://localhost:5555/js/embed_table_3.95.0.js')}
             // config={() => window.System.import('https://res.cloudinary.com/wochap/raw/upload/v1735570922/tmp/spa-parcel-table-30-dec-2024-b.js')}
             wrapWith="section"
-            wrapStyle={{ width: '90vw', height: 400 }}
+            wrapStyle={{ width: '90vw', height: 600 }}
+            block // instructs the widget to match the size of its wrapper element.
+            projectId="f3fb9172-1b4a-490c-b13a-5163e5a7834e"
           />
         )
       }
