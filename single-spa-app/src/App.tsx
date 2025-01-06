@@ -1,30 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Parcel from 'single-spa-react/parcel'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Parcel from "single-spa-react/parcel";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isParcelVisible, setIsParcelVisible] = useState(true)
+  const [count, setCount] = useState(0);
+  const [isParcelVisible, setIsParcelVisible] = useState(true);
 
   return (
     <>
-      <button className="toggle-parcel-btn" type="button" onClick={() => setIsParcelVisible(!isParcelVisible)}>Toggle Parcel</button>
+      <button
+        className="toggle-parcel-btn"
+        type="button"
+        onClick={() => setIsParcelVisible(!isParcelVisible)}
+      >
+        Toggle Parcel
+      </button>
 
       {/* here we load the vizualist table parcel */}
-      {
-        isParcelVisible && (
-          <Parcel
-            config={() => window.System.import('http://localhost:5555/js/embed_table_3.95.0.js')}
-            // config={() => window.System.import('https://res.cloudinary.com/wochap/raw/upload/v1735570922/tmp/spa-parcel-table-30-dec-2024-b.js')}
-            wrapWith="section"
-            wrapStyle={{ width: '90vw', height: 600 }}
-            block // instructs the widget to match the size of its wrapper element.
-            projectId="f3fb9172-1b4a-490c-b13a-5163e5a7834e"
-          />
-        )
-      }
+      {isParcelVisible && (
+        <Parcel
+          config={() =>
+            window.System.import(
+              "http://localhost:5555/js/embed_table_3.95.0.js",
+            )
+          }
+          // config={() => window.System.import('https://res.cloudinary.com/wochap/raw/upload/v1735570922/tmp/spa-parcel-table-30-dec-2024-b.js')}
+          wrapWith="section"
+          wrapStyle={{ width: "90vw", height: 600 }}
+          block // instructs the widget to match the size of its wrapper element.
+          projectId="f3fb9172-1b4a-490c-b13a-5163e5a7834e"
+        />
+      )}
 
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -47,7 +55,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
